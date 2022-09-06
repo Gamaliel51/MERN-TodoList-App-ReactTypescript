@@ -14,6 +14,10 @@ app.use(express.static(path.join(__dirname + "/public")))
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 app.get("/getalltasks", async (req, res) => {
     let alltasks = await todo.find({}).sort({time: 1})
     res.json(alltasks)
