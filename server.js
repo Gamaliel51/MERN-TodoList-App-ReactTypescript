@@ -8,7 +8,7 @@ require("dotenv").config()
 let today = new Date()
 let PORT = process.env.PORT || 5000
 
-const uri = "mongodb+srv://gama225:poploploplop12@cluster0.o3ppycj.mongodb.net/?retryWrites=true&w=majority"
+const uri = process.env.MONGODB_URI
 
 app.use(express.static(path.join(__dirname + "/public")))
 app.use(express.json())
