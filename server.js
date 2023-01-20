@@ -6,7 +6,7 @@ const  app = express()
 require("dotenv").config()
 
 let today = new Date()
-let PORT = process.env.PORT || 5000
+let PORT = process.env.PORT
 
 const uri = process.env.MONGODB_URI
 
