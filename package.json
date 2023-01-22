@@ -13,10 +13,10 @@
   "name": "server",
   "version": "1.0.0",
   "main": "server.js",
+   "engines": {
+    "node": "14.x"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
-  "engines": {
-    "node": "14.x"
-  },
 }
