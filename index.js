@@ -2,6 +2,7 @@ const express = require("express")
 const mongoose = require('mongoose');
 const {todo} = require("./dbfile")
 const path = require("path")
+const cors =  require('cors')
 const  app = express()
 require("dotenv").config()
 
@@ -10,6 +11,7 @@ let PORT = process.env.PORT
 
 const uri = process.env.MONGODB_URI
 
+app.use(cors())
 app.use(express.static(path.join(__dirname + "/public")))
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
