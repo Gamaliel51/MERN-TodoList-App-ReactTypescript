@@ -32,7 +32,7 @@ app.post("/addtask", (req, res) => {
     let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
     todo.insertMany({time: time, date: date, "task": task, done: false})
-    res.redirect("/")
+    res.json({status: "ok"})
 })
 
 app.put("/donetask", async (req, res) => {
